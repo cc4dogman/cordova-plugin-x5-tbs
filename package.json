@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-x5-tbs",
-  "version": "3.7.0",
+  "name": "cordova-plugin-x5-tbs-flyhh",
+  "version": "1.0.5",
   "description": "Use Tencent Browser Service(TBS) instead of System WebView for Cordova App",
   "cordova": {
-    "id": "cordova-plugin-x5-tbs",
+    "id": "cordova-plugin-x5-tbs-flyhh",
     "platforms": [
       "android"
     ]
@@ -35,10 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zsxsoft/cordova-plugin-x5-tbs.git"
+    "url": "git+https://github.com/cc4dogman/cordova-plugin-x5-tbs.git"
   },
   "bugs": {
-    "url": "https://github.com/zsxsoft/cordova-plugin-x5-tbs/issues"
+    "url": "https://github.com/cc4dogman/cordova-plugin-x5-tbs/issues"
   },
-  "homepage": "https://github.com/zsxsoft/cordova-plugin-x5-tbs#readme"
+  "homepage": "https://github.com/cc4dogman/cordova-plugin-x5-tbs#readme"
 }

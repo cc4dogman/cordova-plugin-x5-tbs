@@ -1,4 +1,4 @@
-# cordova-plugin-x5-tbs
+# cordova-plugin-x5-tbs-flyhh
 
 把``Cordova``的``WebView``替换为腾讯的[X5](http://x5.tencent.com/)。使用腾讯TBS完整版SDK。
 
@@ -21,7 +21,7 @@
 
 ## 安装
 
-``cordova plugin add cordova-plugin-x5-tbs``
+``cordova plugin add cordova-plugin-x5-tbs-flyhh``
 
 为确保App启动后即启动X5内核，需要在项目的``MainActivity``的``onCreate``方法内，增加以下代码：
 
@@ -29,7 +29,11 @@
 QbSdk.initX5Environment(this, null);
 ```
 
-另出于某些玄学原因，如应用出现Crash，请手动将以下权限复制入AndroidManifest.xml
+同时也要import下 import com.tencent.smtt.sdk.QbSdk;
+
+
+
+安装好插件后会自动的添加权限到AndroidManifest.xml，如应用出现Crash，请检查并手动将以下权限复制入AndroidManifest.xml
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -45,20 +49,24 @@ QbSdk.initX5Environment(this, null);
 <uses-permission android:name="android.permission.GET_TASKS" />
 ```
 
+## 卸载
+
+``cordova plugin rm cordova-plugin-x5-tbs-flyhh``
+
 ## 环境
 
 ### 当前版本
 
-X5：tbs_sdk_thirdapp_v3.6.0.1352_43618_sharewithdownload_withoutGame_obfs_20180918_120327.jar
+X5：tbs_sdk_thirdapp_v4.3.0.1020_43633_sharewithdownload_withoutGame_obfs_20190111_105200.jar（此版本可以直接在vscode中进行debug了，无需TBS Stdio）
 
 ## 内核替换
 
-你当然可以手动升级到X5内核最新版，或者替换成精简版内核。你只需要删除``platforms/android/libs/tbs_sdk_*.jar``，替换为你需要使用的版本即可。这会使此插件无法通过``cordova plugin remove``等指令被完全删除，还请注意。
+你当然可以手动升级到X5内核最新版，或者替换成精简版内核。你只需要删除``platforms/android/libs/tbs_sdk_*.jar``，替换为你需要使用的版本即可。这会使此插件无法通过``cordova plugin remove``等指令被完全删除，还请注意（PS：也可以使用同一名称直接替换，这样指令都正常）。
 
 
 ## 感谢
 
-此项目继承自项目：https://github.com/offbye/cordova-plugin-x5engine-webview
+此项目继承自项目：[cordova-plugin-x5-tbs](https://github.com/zsxsoft/cordova-plugin-x5-tbs)
 
 ## 技术支持
 
